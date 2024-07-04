@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruva Drive Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a.sign-up {
+            background: #ff5722;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .main-text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+        }
+
+        .main-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .main-text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .main-text a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .services {
+            padding: 40px 20px;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .service {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .service-item {
+            flex: 1;
+            min-width: 300px;
+            max-width: 300px;
+            margin: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .service-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .service-item a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        .features {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .feature-list ul {
+            list-style: none;
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            margin: 20px;
+        }
+
+        .feature-list ul li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .feature-list img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .team {
+            padding: 40px 20px;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .team-member {
+            flex: 1;
+            min-width: 300px;
+            max-width: 300px;
+            margin: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .team-member img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .team-member h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .team-member h4 {
+            font-size: 1.2rem;
+            margin: 5px 0;
+            color: #777;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+        }
+
+        footer {
+            padding: 20px;
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+
+        footer input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        footer button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #ff5722;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .main {
+                flex-direction: column;
+            }
+
+            .main-text h1 {
+                font-size: 2rem;
+            }
+
+            .main-text p {
+                font-size: 1rem;
+            }
+
+            .service-item, .team-member {
+                min-width: 100%;
+            }
+
+            .feature-list ul {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .main-text p {
+                font-size: 0.9rem;
+            }
+
+            .main-text a {
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="logo.JPG" alt="Dhruva Drive Care Logo">
+        <h1>DHRUVA DRIVE CARE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#services">Home</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="contact.html#contact">Contact</a></li>
+                <li><a href="#signup" class="sign-up">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="main-text">
+            <h1>Experience a New Level of Car Cleanliness</h1>
+            <p>At Dhruva Drive Care, we provide top-notch auto detailing services that give your car a brand-new look. Our expert team ensures that your car is cleaned inside and out, leaving it fresh, spotless, and shining.</p>
+            <a href="#services">View All Services</a>
+        </div>
+        <img src="car-cleaning.jpg" alt="Car Cleaning">
+    </main>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <div class="service-item">
+                <img src="c1.jpg" alt="Auto Detailing">
+                <h3>Auto Detailing</h3>
+                <p>We offer top-of-the-line auto detailing services that are tailored to your specific needs, using high-quality products and advanced techniques to restore your car's shine and...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="service-item">
+                <img src="exterior-cleaning.jpg" alt="Exterior Cleaning">
+                <h3>Exterior Cleaning</h3>
+                <p>We offer a wide range of exterior cleaning services that are tailored to your specific needs, using high-quality products and equipment to restore your car's...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="service-item">
+                <img src="interior-cleaning.jpg" alt="Interior Cleaning">
+                <h3>Interior Cleaning</h3>
+                <p>We deliver comprehensive interior cleaning services to keep your car's interior looking and feeling brand new, using specialized products and equipment to clean, condition, and...</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <h2>Features & Benefits</h2>
+        <div class="feature-list">
+            <ul>
+                <li>Expert Auto Detailing</li>
+                <li>Thorough Interior Cleaning</li>
+                <li>Meticulous Exterior Cleaning</li>
+                <li>Specialized Services</li>
+                <li>Professional and Friendly Staff</li>
+            </ul>
+            <ul>
+                <li>Enhanced Car Appearance</li>
+                <li>Improved Driving Experience</li>
+                <li>Extended Vehicle Life</li>
+                <li>Affordable Pricing</li>
+                <li>Superior Quality Services</li>
+            </ul>
+            <img src="fea.jpg" alt="Features and Benefits">
+        </div>
+    </section>
+    <section class="team">
+        <h2>Our Team</h2>
+        <p>Meet Our Expert Team: The Driving Force Behind Dhruva Drive Care’s Success</p>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="team1.jpg" alt="David Johnson">
+                <h3>Likhitha Sri Niveda</h3>
+                <h4>FOUNDER & CEO</h4>
+                <p>With over 15 years of experience in the industry, Likhitha’s expertise and leadership have led Dhruva Drive Care to become a top car cleaning company. He loves cars and travelling.</p>
+            </div>
+            <div class="team-member">
+                <img src="team2.jpg" alt="Jessica Lee">
+                <h3>Manohar Palivela</h3>
+                <h4>HEAD OF INTERIOR CLEANING</h4>
+                <p>Manohar’s eye for detail and meticulous approach to interior cleaning have made her an invaluable member of our team. She loves reading and hiking.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <h2>Subscribe to Newsletter</h2>
+        <p>Enter your email address to register to our newsletter subscription!</p>
+        <input type="email" placeholder="Email Address">
+        <button>Send</button>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruva Drive Care - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a.sign-up {
+            background: #ff5722;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .contact-info h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .map-container {
+            margin-top: 20px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form label {
+            font-size: 1rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ff5722;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-info, .contact-form {
+                padding: 10px;
+            }
+
+            .contact-info h1 {
+                font-size: 1.5rem;
+            }
+
+            .contact-info p {
+                font-size: 1rem;
+            }
+
+            .map-container iframe {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-info h1 {
+                font-size: 1.2rem;
+            }
+
+            .contact-info p {
+                font-size: 0.9rem;
+            }
+
+            .map-container iframe {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="logo.jpg" alt="Dhruva Drive Care Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html#services">Home</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html#signup" class="sign-up">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-contact">
+        <section class="contact-info">
+            <h1>Have Questions?</h1>
+            <p>Please feel free to call or email us, or use our contact form to get in touch with us. We look forward to hearing from you!</p>
+            <p><strong>Emergency? Call Us:</strong></p>
+            <p>+1234567890</p>
+            <p><strong>Send Us Mail:</strong></p>
+            <p>info@example.com</p>
+            <p><strong>Find the Studio:</strong></p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3811.07068989538!2d82.1108433!3d17.2153597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a377953f603e54b%3A0xc9fc88040573e3f0!2sKrishnavaram%20toll%20plaza!5e0!3m2!1sen!2sin!4v1717329492561!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section class="contact-form">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Email Address">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

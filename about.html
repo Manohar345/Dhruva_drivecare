@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruva Drive Care - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        header .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a.signup-btn {
+            background: #ff5722;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .mission-statement {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .mission-statement h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .mission-statement p {
+            font-size: 1.2rem;
+        }
+
+        .image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            padding: 20px;
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+
+        footer input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        footer button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #ff5722;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .mission-statement h1 {
+                font-size: 2rem;
+            }
+
+            .mission-statement p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mission-statement h1 {
+                font-size: 1.5rem;
+            }
+
+            .mission-statement p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.JPG" alt="Dhruva Drive Care Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#services">Home</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html#signup" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="mission-statement">
+            <h1>Mission Statement</h1>
+            <p>At Dhruva Drive Care, we are committed to providing the highest quality car cleaning services to our clients. Our team of experts uses the latest technology and techniques to ensure that your car looks and feels brand new. We pride ourselves on our attention to detail, customer-first philosophy, and commitment to excellence. With us, your satisfaction is guaranteed.</p>
+        </section>
+        <section class="image">
+            <img src="miss.jpg" alt="Car Detailing">
+        </section>
+    </main>
+    <footer class="footer">
+        <h2>Subscribe to Newsletter</h2>
+        <p>Enter your email address to register to our newsletter subscription!</p>
+        <input type="email" placeholder="Email Address">
+        <button>Send</button>
+    </footer>
+</body>
+</html>

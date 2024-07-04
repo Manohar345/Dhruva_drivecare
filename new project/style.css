@@ -1,0 +1,27 @@
+
+.nav-link{
+    color: rgb(0, 0, 0) !important;
+    padding: 14px 16px;
+}
+li a:hover{
+    background-color: #666666;
+}
+.entire{
+    background-color: #666666;
+}
+.para{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.heads{
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+.nav-item{
+    padding-left:5%;
+
+}
+.mb{
+    padding-right: 8%;
+    font-size: 200%;
+}
